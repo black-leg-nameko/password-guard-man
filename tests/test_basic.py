@@ -11,4 +11,4 @@ def test_model_forward():
     m = SmallTransformerClassifier(vocab_size=len(CHARS))
     x = torch.randint(0, len(CHARS)+2, (4, 32), dtype=torch.long)
     y = m(x)
-    assert y.shape == (3, 3)
+    assert y.shape == (4, 3)

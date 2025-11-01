@@ -25,7 +25,7 @@ python -m src.train --train data/synthetic_passwords.jsonl \
 uvicorn src.server:app --reload
 # POST http://127.0.0.1:8000/eval with {"password":"yourpwd"}
 ```
-> Design
+## Design
 > - Defense-only: no candidate generation, no cracking utilities. The model only scores strength and returns advice.
 > - Synthetic data: reproducible without redistributing leaked corpora.
 > - Lightweight + explainable: small Transformer over char tokens; easy to export to TorchScript/ONNX.

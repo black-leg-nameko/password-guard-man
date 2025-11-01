@@ -29,3 +29,11 @@ uvicorn src.server:app --reload
 > - Defense-only: no candidate generation, no cracking utilities. The model only scores strength and returns advice.
 > - Synthetic data: reproducible without redistributing leaked corpora.
 > - Lightweight + explainable: small Transformer over char tokens; easy to export to TorchScript/ONNX.
+
+## Export for client‑side
+```
+# TorchScript
+python -m src.export --weights model.pt --torchscript out/pwd_guardian.ts
+# ONNX
+python -m src.export --weights model.pt --onnx out/pwd_guardian.onnx
+```
